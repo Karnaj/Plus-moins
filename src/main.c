@@ -37,8 +37,8 @@ int demanderMax(void)
 	while(niveau < 1 || niveau > 3)
 	{
 		puts("\n1. Le maximum est 10\n"
-		    "2. Le maximum est 100\n"
-		    "3. Le maximum est 1000\n");
+		     "2. Le maximum est 100\n"
+		     "3. Le maximum est 1000\n");
 		printf("Choisissez un niveau : ");
 		niveau = saisirEntier();
 	}

@@ -4,7 +4,7 @@
 
 double random(void);
 int randint(const int a, const int b);
-int saisirEntier(void);
+int getInt(void);
 void viderBuffer(void);
 int demanderMax(void);
 
@@ -20,7 +20,7 @@ int main(void)
 	while(nombre != test && ++coups)
 	{
 		printf("Donnez un nombre : ");
-		test = saisirEntier();
+		test = getInt();
 		if(test > nombre)
 			puts("Le nombre est plus petit.\n");
 		else if(test < nombre)
@@ -40,13 +40,13 @@ int demanderMax(void)
 		     "2. Le maximum est 100\n"
 		     "3. Le maximum est 1000\n");
 		printf("Choisissez un niveau : ");
-		niveau = saisirEntier();
+		niveau = getInt();
 	}
 	while(niveau != 1 && (n *= 10) && niveau--);
 	return n;
 }
 
-int saisirEntier(void)
+int getInt(void)
 {
 	int nombre = -1;
 	while(scanf("%d", &nombre) < 1)
